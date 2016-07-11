@@ -1,0 +1,65 @@
+Source: proxygen
+Section: libs
+Priority: extra
+Maintainer: Ryan Goodfellow <rgoodfel@isi.edu>
+Build-Depends: libfolly-dev,
+               libwangle-dev,
+               cmake,
+               make (>=4),
+               g++ (>=5),
+               debhelper(>=9),
+               flex,
+               bison,
+               libkrb5-dev,
+               libsasl2-dev,
+               libnuma-dev,
+               pkg-config,
+               libssl-dev,
+               libcap-dev,
+               gperf,
+               autoconf-archive,
+               libevent-dev,
+               libtool,
+               libboost-all-dev,
+               libjemalloc-dev,
+               libsnappy-dev,
+               wget,
+               autotools-dev,
+               unzip
+Standards-Version: 3.9.8
+Homepage: https://github.com/facebook/proxygen
+
+Package: libproxygen
+Section: libs
+Architecture: amd64
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Facebook C++ HTTP library.
+ This project comprises the core C++ HTTP abstractions used at Facebook. 
+ Internally, it is used as the basis for building many HTTP servers, proxies,
+ and clients. This release focuses on the common HTTP abstractions and our 
+ simple HTTPServer framework. Future releases will provide simple client APIs 
+ as well. The framework supports HTTP/1.1, SPDY/3, and SPDY/3.1. HTTP/2 support
+ is in progress. The goal is to provide a simple, performant, and modern C++ 
+ HTTP library.
+ .  
+ We have a Google group for general discussions at 
+ https://groups.google.com/d/forum/facebook-proxygen.
+
+Package: libproxygen-dev
+Section: libdevel
+Architecture: amd64
+Multi-Arch: same
+Depends: libproxygen (= ${binary:Version}), ${misc:Depends}
+Description: Facebook C++ HTTP library.
+ This project comprises the core C++ HTTP abstractions used at Facebook. 
+ Internally, it is used as the basis for building many HTTP servers, proxies, 
+ and clients. This release focuses on the common HTTP abstractions and our 
+ simple HTTPServer framework. Future releases will provide simple client APIs 
+ as well. The framework supports HTTP/1.1, SPDY/3, and SPDY/3.1. HTTP/2 support
+ is in progress. The goal is to provide a simple, performant, and modern C++
+ HTTP library.
+ .  
+ We have a Google group for general discussions at 
+ https://groups.google.com/d/forum/facebook-proxygen.
