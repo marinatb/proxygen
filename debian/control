@@ -34,7 +34,16 @@ Section: libs
 Architecture: amd64
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends},
+         libkrb5-3,
+         libsasl2-2,
+         libnuma1,
+         libssl1.0.2,
+         libcap2,
+         libevent-2.0-5,
+         libtool,
+         libwangle,
+         libfolly57
 Description: Facebook C++ HTTP library.
  This project comprises the core C++ HTTP abstractions used at Facebook. 
  Internally, it is used as the basis for building many HTTP servers, proxies,
@@ -51,7 +60,15 @@ Package: libproxygen-dev
 Section: libdevel
 Architecture: amd64
 Multi-Arch: same
-Depends: libproxygen (= ${binary:Version}), ${misc:Depends}
+Depends: libproxygen (= ${binary:Version}), ${misc:Depends},
+         libkrb5-dev,
+         libsasl2-dev,
+         libnuma-dev,
+         libssl-dev,
+         libcap-dev,
+         libevent-dev,
+         libwangle-dev,
+         libfolly-dev
 Description: Facebook C++ HTTP library.
  This project comprises the core C++ HTTP abstractions used at Facebook. 
  Internally, it is used as the basis for building many HTTP servers, proxies, 
