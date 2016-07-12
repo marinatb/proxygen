@@ -46,8 +46,8 @@ gen-cpp2
 debian/*
 !/debian/rules
 !/debian/control
-!/debian/libfolly57.install
-!/debian/libfolly-dev.install
+!/debian/libproxygen.install
+!/debian/libproxygen-dev.install
 !/debian/changelog
 !/debian/compat
 !/debian/copyright
